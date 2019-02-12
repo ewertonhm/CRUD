@@ -11,6 +11,7 @@ class Aluno {
         $this->set_tabelaAluno('Aluno');
         $this->_dbAluno = DB::get_instance();
         $this->_Historico = new Historico();
+        $this->setDateCadHistorico();
     }
     
     public function criarAluno(){
@@ -50,6 +51,11 @@ class Aluno {
         $this->set_nomeAluno($consulta->nome);        
     }
 
+    public function setDateCadHistorico(){
+        date_default_timezone_set('America/Sao_Paulo');
+        $date = date('Y-m-d H:i');
+        $this->_Historico->set_dataCad($date);
+    }
 
 
 
@@ -94,6 +100,10 @@ class Aluno {
 
     protected function set_tabelaAluno($_tabelaAluno) {
         $this->_tabelaAluno = $_tabelaAluno;
+    }
+
+    public function set_notaHistorico($_notaHistorico){
+        $this->_Historico->set_nota($_notaHistorico);
     }
 
 

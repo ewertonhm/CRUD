@@ -17,7 +17,10 @@ class DB{
             die($e->getMessage());
         }
     }
-  
+
+    /**
+     * @return DB|null
+     */
     public static function get_instance(){
         if(!isset(self::$_instance)){
             self::$_instance = new DB();
@@ -130,6 +133,7 @@ class DB{
                 return $array["$counter"];
             }
             $counter = 0;
+            $innerJoin = NULL;
             foreach($params['joins'] as $join){
                 $innerJoin .= ' INNER JOIN '.$join.' ON '.bindjoin($params['bindjoin'], $counter);
                 $counter++;

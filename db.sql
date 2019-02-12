@@ -1,4 +1,4 @@
-create database auladorodolfim;
+create database crud;
 
 create table aluno (
     id SERIAL PRIMARY KEY,

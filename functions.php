@@ -17,7 +17,7 @@ function top($pagetitle){
                     <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
                     <meta name='description' content=''>
                     <meta name='author' content='Ewerton H Marschalk'>
-                    <link rel='icon' href='https://png.icons8.com/nolan/50/000000/musical-notes.png'>
+                    <link rel='icon' href='https://cdn.icon-icons.com/icons2/72/PNG/256/contact_people_14393.png'>
                     <!-- Bootstrap CSS -->
                     <link href='css/bootstrap.min.css' rel='stylesheet'>
                 </head>
@@ -26,7 +26,6 @@ function top($pagetitle){
 
 function bottom(){
     echo "</body>";
-    footer();
 
     echo "
                 <!-- Jquery JS -->	
@@ -38,4 +37,17 @@ function bottom(){
                 <script src=''></script>
                 </html>
                 ";
+}
+
+/**
+ * @param Aluno $aluno
+ */
+function Cadastrar(Aluno $aluno)
+{
+    $aluno->set_nomeAluno($_POST['nome']);
+    $aluno->set_cpfAluno($_POST['cpf']);
+    $aluno->set_dataNascAluno($_POST['bdate']);
+    $aluno->set_notaHistorico($_POST['nota']);
+    $aluno->criarAluno();
+    return true;
 }

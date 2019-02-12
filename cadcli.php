@@ -1,7 +1,23 @@
 <?php
+
     require_once "functions.php";
+    require_once "classes/Aluno.php";
     top('cadastro');
+
+    // Verificar se o botão ja foi clicado
+    if(isset($_POST['btn-cadastrar'])){
+        // array para exibir avisos
+        $avisos = array();
+
+        $aluno = new Aluno();
+        if(Cadastrar($aluno)){
+            $avisos[] = "Cadastro Realizado com Sucesso!";
+        }
+
+    }
+
 ?>
+
 <div class="container">
     <table style="width:100%">
         <form class="form-control-plaintext" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
@@ -29,10 +45,10 @@
             <div class="text-center">
                 <br><br>
                 <?php
-                // se existir erros, exibe
-                if(!empty($erros)):
-                    foreach ($erros as $erro):
-                        echo $erro."<br>";
+                // se existir avisos, exibe
+                if(!empty($avisos)):
+                    foreach ($avisos as $aviso):
+                        echo $aviso."<br>";
                     endforeach;
                 endif;
                 ?>
@@ -41,5 +57,4 @@
         </form>
     </table>
 </div>
-</body>
-</html>
+<?php bottom(); ?>
