@@ -6,7 +6,8 @@
     $db = DB::get_instance();
     $params = [
         'joins' => ['historico'],
-        'bindjoin' => ['historico.id_aluno = aluno.id']
+        'bindjoin' => ['historico.id_aluno = aluno.id'],
+        'order' => "aluno.id"
     ];
     $consulta = $db->find("aluno",$params);
 

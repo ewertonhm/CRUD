@@ -51,7 +51,7 @@ class Aluno {
         $parametros = [
             'conditions' => ['id = ?'],
             'bind' => [$this->get_idAluno()],
-            'order' => "id"
+            'order' => ['id']
         ];
         $consulta = $this->_dbAluno->findFirst($this->get_tabelaAluno(),$parametros);
         $this->set_cpfAluno($consulta->cpf);

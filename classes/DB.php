@@ -169,6 +169,11 @@ class DB{
         if(array_key_exists('order', $params)){
             $order = ' ORDER BY '.$params['order'];
         }
+
+        // orderbyid
+        if(array_key_exists('orderbyid', $params)){
+            $order = ' ORDER BY ID';
+        }
         
         
         //limit

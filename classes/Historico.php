@@ -36,7 +36,7 @@ class Historico {
         $parametros = [
             'conditions' => ['id = ?'],
             'bind' => [$this->get_idHistorico()],
-            'order' => "id"
+            'orderbyid' => ['true']
         ];
         $consulta = $this->_dbHistorico->findFirst($this->get_tabelaHistorico(),$parametros);
         $this->set_idAluno($consulta->id_aluno);
