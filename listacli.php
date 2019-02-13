@@ -27,6 +27,8 @@
     </thead>
     <tbody>
     <?php foreach ($consulta as $tableItem){
+        $dellink = "delcli.php?id=$tableItem->id";
+        $updatelink = "updatecli.php?id=$tableItem->id";
         echo"<tr>
         <th scope='row'>$tableItem->id</th>
         <td>$tableItem->nome</td>
@@ -34,8 +36,8 @@
         <td>$tableItem->cpf</td>
         <td>$tableItem->nota</td>
         <td>$tableItem->data_cad</td>
-        <td><button type='button' class='btn btn-primary'>Atualizar</button></td>
-        <td><button type='button' class='btn btn-warning'>Deletar</button></td>
+        <td><button type='submit' name='btn-udpdate' class='btn btn-primary'><a class='card-link text-white' href='$updatelink'>Atualizar</a></button></td>
+        <td><button type='submit' name='btn-delete' class='btn btn-warning'><a class='card-link text-white' href='$dellink'>Delete</a></button></td>
     </tr>";
     } ?>
 

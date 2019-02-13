@@ -21,7 +21,7 @@ function top($pagetitle){
                     <!-- Bootstrap CSS -->
                     <link href='css/bootstrap.min.css' rel='stylesheet'>
                 </head>
-                <body>";
+                <body ng-controler='relations'>";
 }
 
 function bottom(){
@@ -29,7 +29,7 @@ function bottom(){
 
     echo "
                 <!-- Jquery JS -->	
-                <script src=''></script>
+                <script src='js/jquery-3.3.1.min.js'></script>
                 <!-- Bootstrap JS -->
                 <script src='js/bootstrap.min.js'></script>
                 <script src='js/bootstrap.bundle.min.js'

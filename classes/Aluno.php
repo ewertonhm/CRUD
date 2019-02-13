@@ -7,11 +7,14 @@ class Aluno {
     private $_nomeAluno, $_dataNascAluno, $_cpfAluno, $_Historico;
     protected $_idAluno, $_dbAluno, $_tabelaAluno;
     
-    public function __construct() {
+    public function __construct($id = NULL) {
         $this->set_tabelaAluno('Aluno');
         $this->_dbAluno = DB::get_instance();
         $this->_Historico = new Historico();
         $this->setDateCadHistorico();
+        if($id != NULL){
+            $this->lerAluno($id);
+        }
     }
     
     public function criarAluno(){
@@ -36,6 +39,8 @@ class Aluno {
     }
     
     public function deletarAluno(){
+        $this->_Historico->lerHistorico($this->get_idAluno());
+        $this->_Historico->deletarHistorico();
         $this->_dbAluno->delete($this->get_tabelaAluno(),$this->get_idAluno());
     }
     
@@ -48,7 +53,8 @@ class Aluno {
         $consulta = $this->_dbAluno->findFirst($this->get_tabelaAluno(),$parametros);
         $this->set_cpfAluno($consulta->cpf);
         $this->set_dataNascAluno($consulta->data_nasc);
-        $this->set_nomeAluno($consulta->nome);        
+        $this->set_nomeAluno($consulta->nome);
+        $this->_Historico->lerHistorico($this->_idAluno);
     }
 
     public function setDateCadHistorico(){
