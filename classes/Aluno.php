@@ -28,7 +28,8 @@ class Aluno {
         $this->_Historico->set_idAluno($this->get_idAluno());
         $this->_Historico->criarHistorico();
     }
-    
+
+
     public function atualizarAluno(){
         $aluno = [
             'nome'=>$this->get_nomeAluno(),
@@ -36,6 +37,7 @@ class Aluno {
             'cpf'=>$this->get_cpfAluno()
         ];
         $this->_dbAluno->update($this->get_tabelaAluno(),$this->get_idAluno(),$aluno);
+        $this->_Historico->atualizarHistorico();
     }
     
     public function deletarAluno(){
@@ -48,7 +50,8 @@ class Aluno {
         $this->set_idAluno($id);
         $parametros = [
             'conditions' => ['id = ?'],
-            'bind' => [$this->get_idAluno()]
+            'bind' => [$this->get_idAluno()],
+            'order' => "id"
         ];
         $consulta = $this->_dbAluno->findFirst($this->get_tabelaAluno(),$parametros);
         $this->set_cpfAluno($consulta->cpf);
@@ -64,6 +67,9 @@ class Aluno {
     }
 
 
+    public function get_notaHistorico(){
+        return $this->_Historico->get_nota();
+    }
 
     // getters 
     function get_nomeAluno() {

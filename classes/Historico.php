@@ -35,12 +35,13 @@ class Historico {
         $this->set_idHistorico($id);
         $parametros = [
             'conditions' => ['id = ?'],
-            'bind' => [$this->get_idHistorico()]
+            'bind' => [$this->get_idHistorico()],
+            'order' => "id"
         ];
         $consulta = $this->_dbHistorico->findFirst($this->get_tabelaHistorico(),$parametros);
         $this->set_idAluno($consulta->id_aluno);
         $this->set_nota($consulta->nota);
-        $this->set_dataCad($consulta->DATA_CAD);
+        $this->set_dataCad($consulta->data_cad);
     }
 
     public function lerHistoricoAlunoId($idAluno){
@@ -52,7 +53,7 @@ class Historico {
         $consulta = $this->_dbHistorico->findFirst($this->get_tabelaHistorico(),$parametros);
         $this->set_idHistorico($consulta->id);
         $this->set_nota($consulta->nota);
-        $this->set_dataCad($consulta->DATA_CAD);
+        $this->set_dataCad($consulta->data_cad);
     }
     
     public function deletarHistorico(){
@@ -60,6 +61,7 @@ class Historico {
     }
     
     // getter
+
     function get_idHistorico() {
         return $this->_idHistorico;
     }
