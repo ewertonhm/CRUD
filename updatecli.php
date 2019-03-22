@@ -1,7 +1,7 @@
 <?php
 
 require_once "functions.php";
-require_once "classes/Aluno.php";
+require_once "App/Aluno.php";
 top('Atualizar Cadastro');
 
 $GLOBALS['aluno'] = new Aluno($_GET['id']);

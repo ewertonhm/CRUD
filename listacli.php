@@ -1,6 +1,6 @@
 <?php
     require_once "functions.php";
-    require_once "classes/DB.php";
+    require_once "App/DB.php";
     top('Listagem de Alunos');
 
     $db = DB::get_instance();
