@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Model;
+namespace App\Models;
 
 require_once 'DB.php';
 require_once 'Aluno.php';
