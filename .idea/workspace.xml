@@ -83,10 +83,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/App/Views/Main.php">
+        <entry file="file://$PROJECT_DIR$/db.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="129">
-              <caret line="37" column="30" selection-start-line="37" selection-start-column="30" selection-end-line="37" selection-end-column="30" />
+            <state relative-caret-position="255">
+              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="18" />
             </state>
           </provider>
         </entry>
@@ -139,7 +139,6 @@
         <option value="$PROJECT_DIR$/classes/DB.php" />
         <option value="$PROJECT_DIR$/classes/Historico.php" />
         <option value="$PROJECT_DIR$/listacli.php" />
-        <option value="$PROJECT_DIR$/db.sql" />
         <option value="$PROJECT_DIR$/cadcli.php" />
         <option value="$PROJECT_DIR$/classes/Model/Aluno.php" />
         <option value="$PROJECT_DIR$/App/Model/DB.php" />
@@ -153,6 +152,7 @@
         <option value="$PROJECT_DIR$/assets/css/custom.css" />
         <option value="$PROJECT_DIR$/assets/css/styles.min.css" />
         <option value="$PROJECT_DIR$/App/Views/Main.php" />
+        <option value="$PROJECT_DIR$/db.sql" />
       </list>
     </option>
   </component>
@@ -187,12 +187,6 @@
               <item name="CRUD" type="b2602c69:ProjectViewProjectNode" />
               <item name="CRUD" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CRUD" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CRUD" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -246,12 +240,12 @@
       <workItem from="1550064807156" duration="3714000" />
       <workItem from="1550080864626" duration="6750000" />
       <workItem from="1553276972039" duration="1137000" />
-      <workItem from="1553279414435" duration="1450000" />
+      <workItem from="1553279414435" duration="1494000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31472000" />
+    <option name="totallyTimeSpent" value="31516000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -336,13 +330,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/composer/autoload_psr4.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -415,13 +402,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="43" selection-start-line="3" selection-start-column="43" selection-end-line="3" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/styles.min.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -438,8 +418,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/App/Views/Main.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
+        <state relative-caret-position="333">
           <caret line="37" column="30" selection-start-line="37" selection-start-column="30" selection-end-line="37" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="43" selection-start-line="3" selection-start-column="43" selection-end-line="3" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="18" />
         </state>
       </provider>
     </entry>
