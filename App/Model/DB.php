@@ -1,9 +1,7 @@
 <?php
-/**
- * Description of DB
- *
- * @author Ewerton
- */
+
+namespace App\Model;
+
 
 class DB{
     private static $_instance = null;

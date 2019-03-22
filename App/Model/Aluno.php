@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Model;
+
 require_once 'DB.php';
 require_once 'Historico.php';
 
