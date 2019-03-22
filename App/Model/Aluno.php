@@ -2,8 +2,6 @@
 
 namespace App\Model;
 
-require_once 'DB.php';
-require_once 'Historico.php';
 
 class Aluno {
     private $_nomeAluno, $_dataNascAluno, $_cpfAluno, $_Historico;
