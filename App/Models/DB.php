@@ -4,10 +4,10 @@ namespace App\Models;
 
 
 class DB{
-    private static $_instance = null;
-    private $_pdo, $_query, $_error = false, $_results, $_count = 0, $_lastInsertID = 'NULL';
+    protected static $_instance = null;
+    protected $_pdo, $_query, $_error = false, $_results, $_count = 0, $_lastInsertID = 'NULL';
     
-    private function __construct() {
+    protected function __construct() {
         try{
             $this->_pdo = new PDO('pgsql:host=127.0.0.1;port=5432;dbname=crud','postgres','postgres');
             //$this->_pdo->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
@@ -117,7 +117,7 @@ class DB{
         }
     }
     
-    private function _read($table,$params = []){
+    protected function _read($table,$params = []){
         $conditionString = '';
         $bind = [];
         $order = '';
