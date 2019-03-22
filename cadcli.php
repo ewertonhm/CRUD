@@ -1,7 +1,7 @@
 <?php
 
     require_once "functions.php";
-    require_once "App/Aluno.php";
+    require_once "App/Clientete.php";
     top('cadastro');
 
     // Verificar se o botão ja foi clicado
