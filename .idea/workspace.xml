@@ -1,20 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/App/Model/Aluno.php" line="8" />
+    <bookmark url="file://$PROJECT_DIR$/App/Model/Aluno.php" line="6" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="04561fa3-53c1-4ce0-aaea-888f02fa8ace" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/composer-dump.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cadcli.php" beforeDir="false" afterPath="$PROJECT_DIR$/cadcli.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/Aluno.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Model/Aluno.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/DB.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Model/DB.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/Historico.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Model/Historico.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/delcli.php" beforeDir="false" afterPath="$PROJECT_DIR$/delcli.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/listacli.php" beforeDir="false" afterPath="$PROJECT_DIR$/listacli.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/updatecli.php" beforeDir="false" afterPath="$PROJECT_DIR$/updatecli.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Model/Aluno.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Model/Aluno.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -47,20 +38,16 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/composer-dump.bat">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="22" selection-start-column="22" selection-end-column="22" />
-            </state>
-          </provider>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/autoload.php">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/App/Model/Aluno.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="20" />
+            <state relative-caret-position="204">
+              <caret line="12" column="43" selection-start-line="12" selection-start-column="43" selection-end-line="12" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -102,11 +89,11 @@
         <option value="$PROJECT_DIR$/db.sql" />
         <option value="$PROJECT_DIR$/cadcli.php" />
         <option value="$PROJECT_DIR$/classes/Model/Aluno.php" />
-        <option value="$PROJECT_DIR$/App/Model/Aluno.php" />
         <option value="$PROJECT_DIR$/App/Model/DB.php" />
         <option value="$PROJECT_DIR$/App/Model/Historico.php" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/composer-dump.bat" />
+        <option value="$PROJECT_DIR$/App/Model/Aluno.php" />
       </list>
     </option>
   </component>
@@ -191,12 +178,21 @@
       <workItem from="1550005841703" duration="6258000" />
       <workItem from="1550064807156" duration="3714000" />
       <workItem from="1550080864626" duration="6750000" />
-      <workItem from="1553276972039" duration="727000" />
+      <workItem from="1553276972039" duration="1137000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29612000" />
+    <option name="totallyTimeSpent" value="30022000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -211,11 +207,11 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" visible="true" weight="0.32936078" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32936078" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32936078" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -294,13 +290,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/App/Model/Aluno.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/App/Model/DB.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -315,6 +304,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/composer/autoload_psr4.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/autoload.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer-dump.bat">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="22" selection-start-column="22" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -322,10 +324,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/composer-dump.bat">
+    <entry file="file://$PROJECT_DIR$/App/Model/Aluno.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="22" selection-start-column="22" selection-end-column="22" />
+        <state relative-caret-position="204">
+          <caret line="12" column="43" selection-start-line="12" selection-start-column="43" selection-end-line="12" selection-end-column="43" />
         </state>
       </provider>
     </entry>
