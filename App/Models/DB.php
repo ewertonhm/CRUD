@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Models;
-
+use \PDO;
 
 class DB{
     protected static $_instance = null;
