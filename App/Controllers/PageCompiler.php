@@ -9,7 +9,10 @@
 namespace App\Controllers;
 
 
+use App\Models\Cliente;
+use App\Models\DB;
 use App\Views\CadastrarClientes;
+use App\Views\ListarClientes;
 use App\Views\Main;
 
 class PageCompiler
@@ -21,6 +24,10 @@ class PageCompiler
             return $page;
         } elseif($page == 'cadcli') {
             $page = new CadastrarClientes($_SERVER['PHP_SELF']);
+        } elseif($page == 'listacli'){
+            $db = DB::get_instance();
+            $data = $db->find('cliente');
+            $page = new ListarClientes($data);
         }
 
     }
