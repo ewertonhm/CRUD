@@ -5,4 +5,10 @@
       <path value="$PROJECT_DIR$/vendor/composer" />
     </include_path>
   </component>
+  <component name="PhpProjectSharedConfiguration" php_language_level="7.2" />
+  <component name="PhpUnit">
+    <phpunit_settings>
+      <PhpUnitSettings load_method="PHPUNIT_PHAR" configuration_file_path="$PROJECT_DIR$/../../bin/php/phpunit 8/phpunit.xml" custom_loader_path="$PROJECT_DIR$/composer.json" phpunit_phar_path="$PROJECT_DIR$/../../bin/php/phpunit 8/phpunit-8.0.4.phar" use_configuration_file="true" />
+    </phpunit_settings>
+  </component>
 </project>
