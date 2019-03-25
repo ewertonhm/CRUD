@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Models;
-
+use \PDO;
 
 class Cliente extends DB {
     private $nomeCliente, $cpfCliente, $telefoneCliente, $dataNascimentoCliente;
@@ -11,6 +11,12 @@ class Cliente extends DB {
     public function __construct($id = NULL) {
         if($id != NULL){
             $this->lerCliente($id);
+        }
+        try{
+            $this->_pdo = new PDO('pgsql:host=127.0.0.1;port=5432;dbname=empresa','postgres','postgres');
+            //$this->_pdo->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
+        } catch (PDOException $e) {
+            die($e->getMessage());
         }
         $this::get_instance();
     }
