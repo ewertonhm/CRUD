@@ -4,10 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/App/Models/Cliente.php" line="6" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="04561fa3-53c1-4ce0-aaea-888f02fa8ace" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/App/Models/DB.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Models/DB.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-    </list>
+    <list default="true" id="04561fa3-53c1-4ce0-aaea-888f02fa8ace" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +87,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/App/Models/DB.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
@@ -99,7 +96,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/composer.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
@@ -325,7 +322,7 @@
       <workItem from="1550080864626" duration="6750000" />
       <workItem from="1553276972039" duration="1137000" />
       <workItem from="1553279414435" duration="3374000" />
-      <workItem from="1553514563522" duration="6350000" />
+      <workItem from="1553514563522" duration="6373000" />
     </task>
     <servers />
   </component>
@@ -338,7 +335,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39746000" />
+    <option name="totallyTimeSpent" value="39769000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -546,17 +543,17 @@
     <entry file="file://$PROJECT_DIR$/html/assets/css/Features-Boxed.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/App/Models/DB.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Models/DB.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
         </state>
       </provider>
     </entry>
