@@ -1,3 +1,19 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Ewert
+ * Date: 25/03/2019
+ * Time: 10:45
+ */
+
+namespace App\Views;
+
+
+class CadastrarClientes
+{
+    public function __construct($origin)
+    {
+        echo "
 <!DOCTYPE html>
 <html>
 
@@ -34,3 +50,6 @@
 </body>
 
 </html>
+        ";
+    }
+}

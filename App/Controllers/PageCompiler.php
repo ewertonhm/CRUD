@@ -9,6 +9,7 @@
 namespace App\Controllers;
 
 
+use App\Views\CadastrarClientes;
 use App\Views\Main;
 
 class PageCompiler
@@ -18,6 +19,11 @@ class PageCompiler
         if($page == NULL){
             $page = new Main();
             return $page;
+        } elseif($page == 'cadcli') {
+            $page = new CadastrarClientes($_SERVER['PHP_SELF']);
         }
+
     }
+
+
 }

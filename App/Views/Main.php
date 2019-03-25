@@ -35,7 +35,7 @@ class Main
             </div>
             <div class='row justify-content-center features'>
                 <div class='col-sm-6 col-md-5 col-lg-4 item'>
-                    <a href='#'>
+                    <a href='cadcli.php'>
                         <div class='box'><i class='fa fa-user-plus icon'></i>
                             <h3 class='name'>Cadastrar clientes</h3>
                         </div>
