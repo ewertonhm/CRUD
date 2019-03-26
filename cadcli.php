@@ -11,5 +11,5 @@ if(isset($_POST['btn-cadastrar'])){
     $c->setDataNascimentoCliente($_POST['bday']);
     $c->setCpfCliente($_POST['cpf']);
     $c->criarCliente();
-    $id = $c->get_lastInsertID();
+    $id = $c->dbCliente->get_lastInsertID();
 }

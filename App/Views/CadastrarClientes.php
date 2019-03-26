@@ -35,9 +35,9 @@ class CadastrarClientes
                     <small>Nome:</small>
                     <input class='form-control' type='text' name='nome'>
                     <small>Data de Nascimento:</small>
-                    <input class='form-control' type='text' name='bday'>
+                    <input class='form-control' type='date' name='bday'>
                     <small>CPF:</small>
-                    <input class='form-control' type='text' name='cpf'>
+                    <input class='form-control cpf-mask' placeholder='Ex.: 000.000.000-00' type='text' name='cpf'>
                     <small>Telefone:</small>
                     <input class='form-control' type='text' name='fone'>
                     <button class='btn btn-secondary' type='submit' name='btn-cadastrar' style='margin:16px 0px;'>Cadastrar</button> 

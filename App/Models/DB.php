@@ -1,25 +1,27 @@
 <?php
+/**
+ * Description of DB
+ *
+ * @author Ewerton
+ */
 
 namespace App\Models;
-use \PDO;
-use \PDOException;
+use PDO;
 
-class DB{
-    protected static $_instance = null;
-    protected $_pdo, $_query, $_error = false, $_results, $_count = 0, $_lastInsertID = 'NULL';
+
+class DB {
+    private static $_instance = null;
+    private $_pdo, $_query, $_error = false, $_results, $_count = 0, $_lastInsertID = 'NULL';
     
-    protected function __construct() {
+    private function __construct() {
         try{
-            $this->_pdo = new PDO('pgsql:host=127.0.0.1;port=5432;dbname=empresa','postgres','postgres');
+            $this->_pdo = new PDO('pgsql:host=127.0.0.1;port=5432;dbname=empresa','postgres','k#c+wiv@');
             //$this->_pdo->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
         } catch (PDOException $e) {
             die($e->getMessage());
         }
     }
-
-    /**
-     * @return DB|null
-     */
+  
     public static function get_instance(){
         if(!isset(self::$_instance)){
             self::$_instance = new DB();
@@ -52,12 +54,7 @@ class DB{
         }
         return $this;
     }
-
-    /**
-     * @param $table
-     * @param array $fields
-     * @return bool
-     */
+    
     public function insert($table, $fields = []){
         $fieldString = '';
         $valueString = '';
@@ -77,14 +74,8 @@ class DB{
             return false;
         }
     }
-
-    /**
-     * @param $table
-     * @param $id
-     * @param array $fields
-     * @return bool
-     */
-    public function update($table, $id, $fields = []){
+    
+    public function update($table,$id,$fields = []){
         $fieldString = '';
         $values = [];
         foreach($fields as $field => $value){
@@ -103,13 +94,8 @@ class DB{
         }
         
     }
-
-    /**
-     * @param $table
-     * @param $id
-     * @return bool
-     */
-    public function delete($table, $id){
+    
+    public function delete($table,$id){        
         $sql = "DELETE FROM {$table} WHERE id = {$id}";
         if(!$this->query($sql)->get_error()){
             return true;
@@ -118,7 +104,7 @@ class DB{
         }
     }
     
-    protected function _read($table,$params = []){
+    private function _read($table,$params = []){
         $conditionString = '';
         $bind = [];
         $order = '';
@@ -132,7 +118,6 @@ class DB{
                 return $array["$counter"];
             }
             $counter = 0;
-            $innerJoin = NULL;
             foreach($params['joins'] as $join){
                 $innerJoin .= ' INNER JOIN '.$join.' ON '.bindjoin($params['bindjoin'], $counter);
                 $counter++;
@@ -168,11 +153,6 @@ class DB{
         if(array_key_exists('order', $params)){
             $order = ' ORDER BY '.$params['order'];
         }
-
-        // orderbyid
-        if(array_key_exists('orderbyid', $params)){
-            $order = ' ORDER BY ID';
-        }
         
         
         //limit
@@ -205,24 +185,14 @@ class DB{
             return false;
         } 
     }
-
-    /**
-     * @param $table
-     * @param array $params
-     * @return bool
-     */
-    public function find($table, $params = []){
+    
+    public function find($table,$params = []){
         if($this->_read($table,$params)){
             return $this->_results;
         }
         return false;
     }
-
-    /**
-     * @param $table
-     * @param array $params
-     * @return bool
-     */
+    
     public function findFirst($table, $params = []){
         if($this->_read($table,$params)){
             return $this->_results[0];

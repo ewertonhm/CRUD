@@ -4,20 +4,16 @@ namespace App\Models;
 use \PDO;
 use \PDOException;
 
-class Cliente extends DB {
+class Cliente {
     private $nomeCliente, $cpfCliente, $telefoneCliente, $dataNascimentoCliente;
     protected $idCliente;
     static private $tabelaCliente = 'cliente';
+    public  $dbCliente;
     
     public function __construct($id = NULL) {
+        $this->dbCliente = DB::get_instance();
         if($id != NULL){
             $this->lerCliente($id);
-        }
-        try{
-            $this->_pdo = new PDO('pgsql:host=127.0.0.1;port=5432;dbname=empresa','postgres','postgres');
-            //$this->_pdo->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
-        } catch (PDOException $e) {
-            die($e->getMessage());
         }
     }
     
@@ -28,8 +24,8 @@ class Cliente extends DB {
             'cpf'=>$this->getcpfCliente(),
             'telefone'=>$this->getTelefoneCliente()
         ];
-        $this->insert($this::$tabelaCliente,$cliente);
-        $this->setIdCliente($this->get_lastInsertID());
+        $this->dbCliente->insert($this::$tabelaCliente,$cliente);
+        $this->setIdCliente($this->dbCliente->get_lastInsertID());
     }
 
 
@@ -40,11 +36,11 @@ class Cliente extends DB {
             'cpf'=>$this->getCpfCliente(),
             'telefone'=>$this->getTelefoneCliente()
         ];
-        $this->update($this::$tabelaCliente,$this->getIdCliente(),$cliente);
+        $this->dbCliente->update($this::$tabelaCliente,$this->getIdCliente(),$cliente);
     }
     
     public function deletarCliente(){
-        $this->delete($this::$tabelaCliente,$this->getIdCliente());
+        $this->dbCliente->delete($this::$tabelaCliente,$this->getIdCliente());
     }
     
     public function lerCliente($id){
@@ -54,7 +50,7 @@ class Cliente extends DB {
             'bind' => [$this->getIdCliente()],
             'order' => ['id']
         ];
-        $consulta = $this->findFirst($this::$tabelaCliente,$parametros);
+        $consulta = $this->dbCliente->findFirst($this::$tabelaCliente,$parametros);
         $this->setCpfCliente($consulta->cpf);
         $this->setDataNascimentoCliente($consulta->data_nasc);
         $this->setNomeCliente($consulta->nome);
