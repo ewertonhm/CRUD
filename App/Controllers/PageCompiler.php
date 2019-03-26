@@ -17,7 +17,7 @@ use App\Views\Main;
 
 class PageCompiler
 {
-    public function __construct($page = NULL)
+    public function __construct($page = NULL, $id = NULL)
     {
         if($page == NULL){
             $page = new Main();
@@ -28,6 +28,9 @@ class PageCompiler
             $db = DB::get_instance();
             $data = $db->find('cliente');
             $page = new ListarClientes($data);
+        } elseif($page == 'cliente'){
+            $c = new Cliente($id);
+            $page = new \App\Views\Cliente($_SERVER['PHP_SELF'],$c);
         }
 
     }

@@ -2,6 +2,7 @@
 
 namespace App\Models;
 use \PDO;
+use \PDOException;
 
 class DB{
     protected static $_instance = null;
@@ -9,7 +10,7 @@ class DB{
     
     protected function __construct() {
         try{
-            $this->_pdo = new \PDO('pgsql:host=127.0.0.1;port=5432;dbname=empresa','postgres','postgres');
+            $this->_pdo = new PDO('pgsql:host=127.0.0.1;port=5432;dbname=empresa','postgres','postgres');
             //$this->_pdo->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
         } catch (PDOException $e) {
             die($e->getMessage());

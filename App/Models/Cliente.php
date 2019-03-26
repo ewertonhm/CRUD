@@ -2,6 +2,7 @@
 
 namespace App\Models;
 use \PDO;
+use \PDOException;
 
 class Cliente extends DB {
     private $nomeCliente, $cpfCliente, $telefoneCliente, $dataNascimentoCliente;
@@ -18,7 +19,6 @@ class Cliente extends DB {
         } catch (PDOException $e) {
             die($e->getMessage());
         }
-        $this::get_instance();
     }
     
     public function criarCliente(){
@@ -51,7 +51,7 @@ class Cliente extends DB {
         $this->setIdCliente($id);
         $parametros = [
             'conditions' => ['id = ?'],
-            'bind' => [$this->getidCliente()],
+            'bind' => [$this->getIdCliente()],
             'order' => ['id']
         ];
         $consulta = $this->findFirst($this::$tabelaCliente,$parametros);

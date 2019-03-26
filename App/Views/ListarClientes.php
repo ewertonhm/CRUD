@@ -26,8 +26,12 @@ class ListarClientes
         <link rel='stylesheet' href='assets/css/styles.css'>
     </head>
 </head>
-<body>
+<body style='background-color:rgb(238,244,247);'>
 <div id='main' class='container-fluid'>
+    <div>
+        <a href='index.php'><button type='button' class='btn btn-secondary' style='margin:16px 0px;'>Voltar</button></a>
+        <a href='cadcli.php'><button type='button' class='btn btn-secondary' style='margin:16px 0px;'>Inserir</button></a>
+    </div>
     <div id='list' class='row'>
         <div class='table-responsive col-md-12'>
             <table class='table table-striped' cellspacing='0' cellpadding='0'>
@@ -38,19 +42,22 @@ class ListarClientes
                     <th>Data de Nascimento</th>
                     <th>Telefone</th>
                     <th>CPF</th>
+                    <th>Editar</th>
                 </tr>
                 </thead>
         ";
 
         foreach ($dataArray as $data){
             echo "
-                <tbody>
+
                 <tr>
+                    <tbody>
                     <td>$data->id</td>
                     <td>$data->nome</td>
                     <td>$data->data_nasc</td>
                     <td>$data->cpf</td>
                     <td>$data->telefone</td>
+                    <td><a href='cliente.php?id=$data->id'><button type='button' class='btn btn-secondary'>Editar</button></a></td>
                 </tr>
                 </tbody>
             ";
