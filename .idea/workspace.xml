@@ -5,19 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="04561fa3-53c1-4ce0-aaea-888f02fa8ace" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/App/Views/CadastrarProduto.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/App/Views/ListarProduto.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/App/Views/Produto.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cadpro.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/delcli.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/delpro.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/listapro.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/produto.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/Controllers/PageCompiler.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Controllers/PageCompiler.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/Models/Produto.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Models/Produto.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/Views/ListarClientes.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Views/ListarClientes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/Views/Main.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Views/Main.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delcli.php" beforeDir="false" afterPath="$PROJECT_DIR$/delcli.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -44,12 +33,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/delcli.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="374">
-              <caret line="22" column="133" selection-start-line="22" selection-start-column="133" selection-end-line="22" selection-end-column="133" />
+              <caret line="22" column="128" selection-start-line="22" selection-start-column="128" selection-end-line="22" selection-end-column="128" />
               <folding>
+                <element signature="n#style#0;n#button#0;n#a#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#button#0;n#a#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#button#0;n#a#1;n#!!top" expanded="true" />
               </folding>
@@ -57,7 +47,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/delpro.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="289">
@@ -172,8 +162,8 @@
         <option value="$PROJECT_DIR$/cadpro.php" />
         <option value="$PROJECT_DIR$/App/Views/ListarClientes.php" />
         <option value="$PROJECT_DIR$/App/Views/ListarProduto.php" />
-        <option value="$PROJECT_DIR$/delcli.php" />
         <option value="$PROJECT_DIR$/delpro.php" />
+        <option value="$PROJECT_DIR$/delcli.php" />
       </list>
     </option>
   </component>
@@ -291,7 +281,7 @@
       <workItem from="1553540719942" duration="6268000" />
       <workItem from="1553617313633" duration="3677000" />
       <workItem from="1553639374511" duration="3282000" />
-      <workItem from="1554741187458" duration="8176000" />
+      <workItem from="1554741187458" duration="8349000" />
     </task>
     <servers />
   </component>
@@ -304,7 +294,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61172000" />
+    <option name="totallyTimeSpent" value="61345000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -589,10 +579,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/delcli.php">
+    <entry file="file://$PROJECT_DIR$/delpro.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="133" selection-start-line="22" selection-start-column="133" selection-end-line="22" selection-end-column="133" />
+        <state relative-caret-position="289">
+          <caret line="17" column="119" selection-start-line="17" selection-start-column="119" selection-end-line="17" selection-end-column="119" />
           <folding>
             <element signature="n#style#0;n#button#0;n#a#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#button#0;n#a#1;n#!!top" expanded="true" />
@@ -600,11 +590,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/delpro.php">
+    <entry file="file://$PROJECT_DIR$/delcli.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="119" selection-start-line="17" selection-start-column="119" selection-end-line="17" selection-end-column="119" />
+        <state relative-caret-position="374">
+          <caret line="22" column="128" selection-start-line="22" selection-start-column="128" selection-end-line="22" selection-end-column="128" />
           <folding>
+            <element signature="n#style#0;n#button#0;n#a#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#button#0;n#a#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#button#0;n#a#1;n#!!top" expanded="true" />
           </folding>

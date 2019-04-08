@@ -2,118 +2,109 @@
 
 namespace App\Models;
 
-require_once 'DB.php';
-require_once 'Cliente.php';
-
 class Produto {
-    
-    protected $_idHistorico, $_tabelaHistorico, $_dbHistorico, $id_Aluno;
-    private $_nota, $_dataCad;
-    
-    public function __construct() {
-        $this->set_tabelaHistorico('historico');
-        $this->_dbHistorico = DB::get_instance();
+    public $nomeProduto, $quantidadeProduto, $valorProduto, $unidadeDeMedidaProduto;
+    public $idProduto;
+    static private $tabelaProduto = 'produto';
+    public  $dbProduto;
+
+    public function __construct($id = NULL) {
+        $this->dbProduto = DB::get_instance();
+        if($id != NULL){
+            $this->lerProduto($id);
+        }
     }
 
-    public function criarHistorico(){
-        $historico = [
-            'id_aluno'=>$this->get_idAluno(),
-            'nota'=>$this->get_nota(),
-            'DATA_CAD'=>$this->get_dataCad()
+    public function criarProduto(){
+        $Produto = [
+            'nome'=>$this->getNomeProduto(),
+            'unidademedida'=>$this->getUnidadeDeMedidaProduto(),
+            'quantidade'=>$this->getQuantidadeProduto(),
+            'valor'=>$this->getValorProduto()
         ];
-        $this->_dbHistorico->insert($this->get_tabelaHistorico(),$historico);
-        $this->set_idHistorico($this->_dbHistorico->get_lastInsertID());
+        $this->dbProduto->insert($this::$tabelaProduto,$Produto);
+        $this->setIdProduto($this->dbProduto->get_lastInsertID());
     }
-    
-    public function atualizarHistorico(){
-        $historico = [
-            'nota'=>$this->get_nota(),
-            'DATA_CAD'=>$this->get_dataCad()
+
+
+    public function atualizarProduto(){
+        $Produto = [
+            'nome'=>$this->getNomeProduto(),
+            'unidademedida'=>$this->getUnidadeDeMedidaProduto(),
+            'quantidade'=>$this->getQuantidadeProduto(),
+            'valor'=>$this->getValorProduto()
         ];
-        $this->_dbHistorico->update($this->get_tabelaHistorico(),$this->get_idHistorico(),$historico);
+        $this->dbProduto->update($this::$tabelaProduto,$this->getIdProduto(),$Produto);
     }
-    
-    public function lerHistorico($id){
-        $this->set_idHistorico($id);
+
+    public function deletarProduto(){
+        $this->dbProduto->delete($this::$tabelaProduto,$this->getIdProduto());
+    }
+
+    public function lerProduto($id){
+        $this->setIdProduto($id);
         $parametros = [
             'conditions' => ['id = ?'],
-            'bind' => [$this->get_idHistorico()],
-            'orderbyid' => ['true']
+            'bind' => [$this->getIdProduto()]
         ];
-        $consulta = $this->_dbHistorico->findFirst($this->get_tabelaHistorico(),$parametros);
-        $this->set_idAluno($consulta->id_aluno);
-        $this->set_nota($consulta->nota);
-        $this->set_dataCad($consulta->data_cad);
+        $consulta = $this->dbProduto->findFirst($this::$tabelaProduto,$parametros);
+        $this->setQuantidadeProduto($consulta->quantidade);
+        $this->setUnidadeDeMedidaProduto($consulta->unidademedida);
+        $this->setNomeProduto($consulta->nome);
+        $this->setValorProduto($consulta->valor);
+
+
     }
 
-    public function lerHistoricoAlunoId($idAluno){
-        $this->set_idAluno($idAluno);
-        $parametros = [
-            'conditions' => ['id_aluno = ?'],
-            'bind' => [$this->get_idAluno()]
-        ];
-        $consulta = $this->_dbHistorico->findFirst($this->get_tabelaHistorico(),$parametros);
-        $this->set_idHistorico($consulta->id);
-        $this->set_nota($consulta->nota);
-        $this->set_dataCad($consulta->data_cad);
-    }
-    
-    public function deletarHistorico(){
-        $this->_dbHistorico->delete($this->get_tabelaHistorico(),$this->get_idHistorico());
-    }
-    
-    // getter
-
-    function get_idHistorico() {
-        return $this->_idHistorico;
-    }
-
-    function get_nota() {
-        return $this->_nota;
-    }
-
-    function get_dataCad() {
-        return $this->_dataCad;
-    }
-
-    private function get_tabelaHistorico() {
-        return $this->_tabelaHistorico;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function get_idAluno()
+    public function getIdProduto()
     {
-        return $this->id_Aluno;
+        return $this->idProduto;
     }
 
-
-    // setter
-    function set_idHistorico($_idHistorico) {
-        $this->_idHistorico = $_idHistorico;
-    }
-
-    function set_nota($_nota) {
-        $this->_nota = $_nota;
-    }
-
-    function set_dataCad($_dataCad) {
-        $this->_dataCad = $_dataCad;
-    }
-
-    private function set_tabelaHistorico($_tabelaHistorico) {
-        $this->_tabelaHistorico = $_tabelaHistorico;
-    }
-
-    /**
-     * @param mixed $id_Aluno
-     */
-    public function set_idAluno($id_Aluno)
+    public function setIdProduto($idProduto)
     {
-        $this->id_Aluno = $id_Aluno;
+        $this->idProduto = $idProduto;
     }
 
+    public function getNomeProduto()
+    {
+        return $this->nomeProduto;
+    }
+
+    public function setNomeProduto($nomeProduto)
+    {
+        $this->nomeProduto = $nomeProduto;
+    }
+
+    public function getQuantidadeProduto()
+    {
+        return $this->quantidadeProduto;
+    }
+
+    public function setQuantidadeProduto($QuantidadeProduto)
+    {
+        $this->quantidadeProduto = $QuantidadeProduto;
+    }
+
+    public function getValorProduto()
+    {
+        return $this->valorProduto;
+    }
+
+    public function setValorProduto($ValorProduto)
+    {
+        $this->valorProduto = $ValorProduto;
+    }
+
+    public function getUnidadeDeMedidaProduto()
+    {
+        return $this->unidadeDeMedidaProduto;
+    }
+
+    public function setUnidadeDeMedidaProduto($UnidadeDeMedidaProduto)
+    {
+        $this->unidadeDeMedidaProduto = $UnidadeDeMedidaProduto;
+    }
 
 
 }
