@@ -9,7 +9,7 @@
 namespace App\Views;
 
 
-class ListarClientes
+class ListarProduto
 {
     public function __construct($dataArray)
     {
@@ -39,9 +39,9 @@ class ListarClientes
                 <tr>
                     <th>ID</th>
                     <th>Nome</th>
-                    <th>Data de Nascimento</th>
-                    <th>Telefone</th>
-                    <th>CPF</th>
+                    <th>Quantidade</th>
+                    <th>Valor</th>
+                    <th>Unidade de Medida</th>
                     <th>Editar</th>
                 </tr>
                 </thead>
@@ -54,12 +54,12 @@ class ListarClientes
                     <tbody>
                     <td>$data->id</td>
                     <td>$data->nome</td>
-                    <td>$data->data_nasc</td>
-                    <td>$data->cpf</td>
-                    <td>$data->telefone</td>
+                    <td>$data->quantidade</td>
+                    <td>$data->valor</td>
+                    <td>$data->unidademedida</td>
                     <td>
-                        <a href='cliente.php?id=$data->id'><button type='button' class='btn btn-secondary'>Editar</button></a>
-                        <a href='delcli.php?id=$data->id'><button type='button' class='btn btn-secondary'>Excluir</button></a>
+                        <a href='produto.php?id=$data->id'><button type='button' class='btn btn-secondary'>Editar</button></a>
+                        <a href='delpro.php?id=$data->id'><button type='button' class='btn btn-secondary'>Excluir</button></a>
                     </td>
                 </tr>
                 </tbody>

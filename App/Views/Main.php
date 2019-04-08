@@ -49,14 +49,14 @@ class Main
                      </a>   
                 </div>
                 <div class='col-sm-6 col-md-5 col-lg-5 item'>
-                    <a href='#'>
+                    <a href='cadpro.php'>
                         <div class='box'><i class='fa fa-cart-plus icon'></i>
                             <h3 class='name'>Cadastrar Produtos</h3>
                         </div>
                     </a>    
                 </div>
                 <div class='col-sm-6 col-md-5 col-lg-5 item'>
-                    <a href='#'>
+                    <a href='listapro.php'>
                         <div class='box'><i class='fa fa-cart-arrow-down icon'></i>
                             <h3 class='name'>Listar Produtos</h3>
                         </div>
