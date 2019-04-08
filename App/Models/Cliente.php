@@ -5,8 +5,8 @@ use \PDO;
 use \PDOException;
 
 class Cliente {
-    private $nomeCliente, $cpfCliente, $telefoneCliente, $dataNascimentoCliente;
-    protected $idCliente;
+    public $nomeCliente, $cpfCliente, $telefoneCliente, $dataNascimentoCliente;
+    public $idCliente;
     static private $tabelaCliente = 'cliente';
     public  $dbCliente;
     
@@ -47,8 +47,7 @@ class Cliente {
         $this->setIdCliente($id);
         $parametros = [
             'conditions' => ['id = ?'],
-            'bind' => [$this->getIdCliente()],
-            'order' => ['id']
+            'bind' => [$this->getIdCliente()]
         ];
         $consulta = $this->dbCliente->findFirst($this::$tabelaCliente,$parametros);
         $this->setCpfCliente($consulta->cpf);
@@ -59,81 +58,51 @@ class Cliente {
 
     }
 
-    /**
-     * @return mixed
-     */
     public function getIdCliente()
     {
         return $this->idCliente;
     }
 
-    /**
-     * @param mixed $idCliente
-     */
     public function setIdCliente($idCliente)
     {
         $this->idCliente = $idCliente;
     }
 
-    /**
-     * @return mixed
-     */
     public function getNomeCliente()
     {
         return $this->nomeCliente;
     }
 
-    /**
-     * @param mixed $nomeCliente
-     */
     public function setNomeCliente($nomeCliente)
     {
         $this->nomeCliente = $nomeCliente;
     }
 
-    /**
-     * @return mixed
-     */
     public function getCpfCliente()
     {
         return $this->cpfCliente;
     }
 
-    /**
-     * @param mixed $cpfCliente
-     */
     public function setCpfCliente($cpfCliente)
     {
         $this->cpfCliente = $cpfCliente;
     }
 
-    /**
-     * @return mixed
-     */
     public function getTelefoneCliente()
     {
         return $this->telefoneCliente;
     }
 
-    /**
-     * @param mixed $telefoneCliente
-     */
     public function setTelefoneCliente($telefoneCliente)
     {
         $this->telefoneCliente = $telefoneCliente;
     }
 
-    /**
-     * @return mixed
-     */
     public function getDataNascimentoCliente()
     {
         return $this->dataNascimentoCliente;
     }
 
-    /**
-     * @param mixed $dataNascimentoCliente
-     */
     public function setDataNascimentoCliente($dataNascimentoCliente)
     {
         $this->dataNascimentoCliente = $dataNascimentoCliente;

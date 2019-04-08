@@ -42,7 +42,7 @@ class CadastrarClientes
                     <input class='form-control' type='text' name='fone'>
                     <button class='btn btn-secondary' type='submit' name='btn-cadastrar' style='margin:16px 0px;'>Cadastrar</button> 
                 </form>
-                <a href='index.php'><button class='btn btn-secondary' style='margin:-16px 0px;'>Voltar</button></a> 
+                <a href='index.php'><button class='btn btn-secondary' style='margin:-16px 0px;'>Inicio</button></a> 
             </div>
         </div>
     </div>

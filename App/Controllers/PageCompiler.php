@@ -8,7 +8,6 @@
 
 namespace App\Controllers;
 
-
 use App\Models\Cliente;
 use App\Models\DB;
 use App\Views\CadastrarClientes;
@@ -31,6 +30,7 @@ class PageCompiler
         } elseif($page == 'cliente'){
             $c = new Cliente($id);
             $page = new \App\Views\Cliente($_SERVER['PHP_SELF'],$c);
+
         }
 
     }

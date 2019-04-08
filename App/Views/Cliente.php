@@ -11,7 +11,7 @@ namespace App\Views;
 
 class Cliente
 {
-    public function __construct($origin,\App\Models\Cliente $c)
+    public function __construct($origin, $c)
     {
         echo "
 <!DOCTYPE html>
@@ -30,19 +30,19 @@ class Cliente
     <div class='features-boxed'>
         <div class='container'>
             <div class='intro'>
-                <h2 class='text-center'>Cadastrar Clientes</h2>
+                <h2 class='text-center'>Editar Cliente</h2>
                 <form action='$origin' method='POST'>
                     <small>ID:</small>
-                    <input class='form-control' type='text' name='id' placeholder='$c->getIdCliente()' readonly>
+                    <input class='form-control' type='text' name='id' value='$c->idCliente' readonly>
                     <small>Nome:</small>
-                    <input class='form-control' type='text' name='nome' value='$c->getNomeCliente()'>
+                    <input class='form-control' type='text' name='nome' value='$c->nomeCliente'>
                     <small>Data de Nascimento:</small>
-                    <input class='form-control' type='text' name='bday' value='$c->getDataNascimentoCliente()'>
+                    <input class='form-control' type='text' name='bday' value='$c->dataNascimentoCliente'>
                     <small>CPF:</small>
-                    <input class='form-control' type='text' name='cpf' value='$c->getCpfCliente()'>
+                    <input class='form-control' type='text' name='cpf' value='$c->cpfCliente'>
                     <small>Telefone:</small>
-                    <input class='form-control' type='text' name='fone' value='$c->getCpfCliente()'>
-                    <button class='btn btn-secondary' type='submit' name='btn-cadastrar' style='margin:16px 0px;'>Cadastrar</button> 
+                    <input class='form-control' type='text' name='fone' value='$c->telefoneCliente'>
+                    <button class='btn btn-secondary' type='submit' name='btn-cadastrar' style='margin:16px 0px;'>Salvar</button> 
                 </form>
                 <a href='index.php'><button class='btn btn-secondary' style='margin:-16px 0px;'>Voltar</button></a> 
             </div>

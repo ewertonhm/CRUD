@@ -29,7 +29,7 @@ class ListarClientes
 <body style='background-color:rgb(238,244,247);'>
 <div id='main' class='container-fluid'>
     <div>
-        <a href='index.php'><button type='button' class='btn btn-secondary' style='margin:16px 0px;'>Voltar</button></a>
+        <a href='index.php'><button type='button' class='btn btn-secondary' style='margin:16px 0px;'>Inicio</button></a>
         <a href='cadcli.php'><button type='button' class='btn btn-secondary' style='margin:16px 0px;'>Inserir</button></a>
     </div>
     <div id='list' class='row'>
