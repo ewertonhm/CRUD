@@ -34,29 +34,29 @@ class Main
                 <h2 class='text-center'>Principal</h2>
             </div>
             <div class='row justify-content-center features'>
-                <div class='col-sm-6 col-md-5 col-lg-4 item'>
-                    <a href='#'>
+                <div class='col-sm-6 col-md-5 col-lg-5 item'>
+                    <a href='cadcli.php'>
                         <div class='box'><i class='fa fa-user-plus icon'></i>
                             <h3 class='name'>Cadastrar clientes</h3>
                         </div>
                     </a>
                 </div>
-                <div class='col-sm-6 col-md-5 col-lg-4 item'>
-                     <a href='#'>
+                <div class='col-sm-6 col-md-5 col-lg-5 item'>
+                     <a href='listacli.php'>
                         <div class='box'><i class='fa fa-users icon'></i>
                             <h3 class='name'>Listar Clientes</h3>
                         </div>
                      </a>   
                 </div>
-                <div class='col-sm-6 col-md-5 col-lg-4 item'>
-                    <a href='#'>
+                <div class='col-sm-6 col-md-5 col-lg-5 item'>
+                    <a href='cadpro.php'>
                         <div class='box'><i class='fa fa-cart-plus icon'></i>
                             <h3 class='name'>Cadastrar Produtos</h3>
                         </div>
                     </a>    
                 </div>
-                <div class='col-sm-6 col-md-5 col-lg-4 item'>
-                    <a href='#'>
+                <div class='col-sm-6 col-md-5 col-lg-5 item'>
+                    <a href='listapro.php'>
                         <div class='box'><i class='fa fa-cart-arrow-down icon'></i>
                             <h3 class='name'>Listar Produtos</h3>
                         </div>

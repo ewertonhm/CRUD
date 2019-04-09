@@ -1,3 +1,19 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Ewert
+ * Date: 25/03/2019
+ * Time: 10:45
+ */
+
+namespace App\Views;
+
+
+class CadastrarClientes
+{
+    public function __construct($origin)
+    {
+        echo "
 <!DOCTYPE html>
 <html>
 
@@ -19,13 +35,14 @@
                     <small>Nome:</small>
                     <input class='form-control' type='text' name='nome'>
                     <small>Data de Nascimento:</small>
-                    <input class='form-control' type='text' name='bday'>
+                    <input class='form-control' type='date' name='bday'>
                     <small>CPF:</small>
-                    <input class='form-control' type='text' name='cpf'>
+                    <input class='form-control cpf-mask' placeholder='Ex.: 000.000.000-00' type='text' name='cpf'>
                     <small>Telefone:</small>
                     <input class='form-control' type='text' name='fone'>
-                    <button class='btn btn-secondary' type='submit' name='btn-cadastrar' style='margin:16px 0px;'>Cadastrar</button>
+                    <button class='btn btn-secondary' type='submit' name='btn-cadastrar' style='margin:16px 0px;'>Cadastrar</button> 
                 </form>
+                <a href='index.php'><button class='btn btn-secondary' style='margin:-16px 0px;'>Inicio</button></a> 
             </div>
         </div>
     </div>
@@ -34,3 +51,6 @@
 </body>
 
 </html>
+        ";
+    }
+}
